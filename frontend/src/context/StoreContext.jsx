@@ -9,7 +9,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = import.meta.env.VITE_BACKEND_URL;
+  const url = "https://my-cantten-appliction.onrender.com";
 
   // ✅ Token restore from localStorage (IMPORTANT FIX)
   const [token, setToken] = useState(localStorage.getItem("token") || "");
