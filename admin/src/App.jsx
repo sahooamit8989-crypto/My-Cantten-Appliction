@@ -15,7 +15,7 @@ import AdminRewardClaims from './pages/AdminRewardClaims/AdminRewardClaims';
 
 
 const App = () => {
-  const url = import.meta.env.VITE_BACKEND_URL;
+  const url ="https://my-cantten-appliction.onrender.com";
   return (
     <div>
       <ToastContainer/>
