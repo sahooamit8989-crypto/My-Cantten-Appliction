@@ -78,7 +78,6 @@
 
 
 
-
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
@@ -108,20 +107,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
-/* ================= DB CONNECTION (SERVERLESS SAFE) ================= */
-/*
-   This ensures MongoDB connects when a request comes in,
-   not at file load time.
-*/
-app.use(async (req, res, next) => {
-  try {
-    await connectDB();
-    next();
-  } catch (error) {
-    next(error);
-  }
-});
-
 /* ================= ROUTES ================= */
 
 app.use("/api/food", foodRouter);
@@ -148,24 +133,25 @@ app.get("/", (req, res) => {
 
 app.use(errorMiddleware);
 
-/* ================= LOCAL DEVELOPMENT ================= */
+/* ================= START SERVER ================= */
 
-if (process.env.NODE_ENV !== "production") {
-  const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
-  app.listen(PORT, () => {
-    console.log(`✅ Server running on http://localhost:${PORT}`);
-  });
-}
+const startServer = async () => {
+  try {
+    await connectDB();
+    console.log("✅ Database connected");
 
-/* ================= EXPORT FOR VERCEL ================= */
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error("❌ Failed to start server:", error.message);
+    process.exit(1);
+  }
+};
 
-export default app;
-
-
-
-
-
+startServer();
 
 
 
