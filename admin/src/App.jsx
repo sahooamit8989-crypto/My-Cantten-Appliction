@@ -15,7 +15,7 @@ import AdminRewardClaims from './pages/AdminRewardClaims/AdminRewardClaims';
 
 
 const App = () => {
-  const url ="https://my-cantten-appliction.onrender.com";
+  const url ="https://my-cantten-appliction-servers.onrender.com";
   return (
     <div>
       <ToastContainer/>
