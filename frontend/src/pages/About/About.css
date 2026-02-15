@@ -1,0 +1,251 @@
+/* ================================
+   ABOUT PAGE - ORANGE THEME FINAL
+================================ */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  padding-bottom: 60px;
+  background: transparent;
+}
+
+/* HERO SECTION */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 280px;
+  background: url("/cann.avif") center / cover no-repeat;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+}
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 140, 0, 0.35);
+  z-index: 1;
+}
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  animation: slideUp 1s ease forwards;
+}
+.about-hero-content h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.about-hero-content p {
+  font-size: clamp(14px, 1.2vw, 18px);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* MISSION (FIXED VISIBILITY) */
+.about-mission {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #ff8c42, #ffb26b);
+  border-radius: 20px;
+  margin: 0 20px;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.25);
+}
+.about-mission h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #fff;
+  margin-bottom: 14px;
+}
+.about-mission p {
+  font-size: clamp(14px, 1.1vw, 18px);
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* FEATURES */
+.about-features {
+  padding: 0 20px;
+  text-align: center;
+}
+.about-features h2 {
+  font-size: clamp(22px, 2.5vw, 34px);
+  color: #ff8c42;
+  margin-bottom: 30px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.feature-card {
+  background: linear-gradient(145deg, #ff8c42, #ffb26b);
+  border-radius: 20px;
+  padding: 24px 16px;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.25);
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(255, 140, 0, 0.35);
+}
+.feature-card img {
+  width: 60px;
+  margin-bottom: 16px;
+}
+.feature-card h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.feature-card p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* TEAM */
+.about-team {
+  padding: 0 20px;
+  text-align: center;
+}
+.about-team h2 {
+  font-size: clamp(22px, 2.5vw, 34px);
+  color: #ff8c42;
+  margin-bottom: 30px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.team-card {
+  background: linear-gradient(145deg, #ff8c42, #ffb26b);
+  border-radius: 18px;
+  padding: 20px 12px;
+  box-shadow: 0 6px 18px rgba(255, 140, 0, 0.25);
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(255, 140, 0, 0.35);
+}
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+.team-card h3 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.team-card p {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* STATS */
+.about-stats {
+  padding: 0 20px;
+}
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.stat-card {
+  background: linear-gradient(145deg, #ff8c42, #ffb26b);
+  color: #fff;
+  padding: 24px 36px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 140px;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(255, 140, 0, 0.35);
+}
+.stat-card h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.stat-card p {
+  font-size: 14px;
+}
+
+/* CTA */
+.about-cta {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #ff8c42, #ffb26b);
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.25);
+}
+.about-cta h2 {
+  font-size: clamp(22px, 3vw, 36px);
+  margin-bottom: 12px;
+}
+.about-cta p {
+  font-size: clamp(14px, 1.1vw, 18px);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #fff;
+  color: #ff8c42;
+  font-weight: 600;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 140, 0, 0.35);
+}
+
+/* ANIMATIONS */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) { .about-hero { height: 45vh; } }
+@media (max-width: 768px) { 
+  .about-hero { height: 40vh; }
+  .features-grid, .team-grid { gap: 18px; }
+}
+@media (max-width: 480px) {
+  .about-hero { height: 35vh; }
+  .feature-card, .team-card { padding: 18px 12px; }
+  .feature-card img { width: 50px; }
+  .team-card img { width: 80px; height: 80px; }
+  .stat-card { min-width: 120px; padding: 18px 24px; }
+}

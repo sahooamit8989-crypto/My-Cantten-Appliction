@@ -1,0 +1,299 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.reward-container {
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+  min-height: 100vh;
+  margin-top: 50px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* FORM */
+
+.reward-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.reward-form input,
+.reward-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  min-width: 150px;
+}
+
+.add-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #388e3c;
+}
+
+/* TABLE */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.reward-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.reward-table th,
+.reward-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.reward-table th {
+  background: #ff9800;
+  color: white;
+}
+
+/* STATUS */
+
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.inactive {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE FIX */
+
+@media (max-width: 768px) {
+  .reward-form {
+    flex-direction: column;
+  }
+
+  .reward-form input,
+  .reward-form select,
+  .add-btn {
+    width: 100%;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONTAINER */
+.reward-container {
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+  min-height: 100vh;
+  margin-top: 100px;
+  width: 100%;
+   padding-top: 50px;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* FORM */
+.reward-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.reward-form input,
+.reward-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  min-width: 150px;
+  flex: 1;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.add-btn:hover {
+  background: #388e3c;
+}
+
+/* TABLE WRAPPER */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* TABLE */
+.reward-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 600px; /* Prevent table from squishing */
+}
+
+.reward-table th,
+.reward-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.reward-table th {
+  background: #ff9800;
+  color: white;
+}
+
+/* STATUS */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.inactive {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .reward-container {
+    padding-top: 30px;
+    padding: 15px;
+    margin-top: 50px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .reward-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .reward-form input,
+  .reward-form select,
+  .add-btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .reward-table {
+    min-width: 600px; /* allow horizontal scroll */
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  .reward-container {
+    padding-top: 20px;
+    padding: 12px;
+  }
+
+  .reward-table th,
+  .reward-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .status {
+    font-size: 12px;
+  }
+
+  .delete-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}

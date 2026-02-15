@@ -1,0 +1,207 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= MAIN CONTAINER ================= */
+.list {
+  position: absolute;
+
+  /* below fixed navbar */
+  top: 68px;
+
+  /* after fixed sidebar */
+  left: 18%;
+
+  /* remaining width */
+  width: calc(100vw - 18%);
+
+  /* remaining height */
+  height: calc(100vh - 68px);
+
+  padding: 25px;
+
+  overflow-y: auto;
+
+  background: linear-gradient(145deg, #020617, #0b0f1a);
+
+  color: #e5e7eb;
+  animation: fadeUp 0.6s ease;
+}
+
+/* ================= TITLE ================= */
+.list > p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #f8fafc;
+  letter-spacing: 0.4px;
+}
+
+/* ================= TABLE WRAPPER ================= */
+.list-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ================= TABLE ROW ================= */
+.list-table-format {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 16px;
+  margin-bottom: 12px;
+
+  background: linear-gradient(145deg, #020617, #0f172a);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+  font-size: 15px;
+  transition: all 0.35s ease;
+}
+
+/* Hover glow */
+.list-table-format:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+}
+
+/* ================= TABLE HEADER ================= */
+.list-table-format.title {
+  background: linear-gradient(135deg, #1e293b, #020617);
+  font-weight: 600;
+  color: #94a3b8;
+  box-shadow: none;
+}
+
+/* ================= IMAGE ================= */
+.list-table-format img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+
+  border-radius: 10px;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+/* ================= TEXT ================= */
+.list-table-format p {
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+/* ================= DELETE ACTION ================= */
+.list-table-format p:last-child {
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.list-table-format p:last-child:hover {
+  color: #f87171;
+  transform: scale(1.3) rotate(10deg);
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 900px) {
+  .list {
+    left: 70px;
+    width: calc(100vw - 70px);
+  }
+
+  .list-table-format {
+    grid-template-columns: 70px 1fr 1fr 0.8fr 0.5fr;
+    font-size: 14px;
+  }
+
+  .list > p {
+    font-size: 20px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .list-table-format.title {
+    display: none;
+  }
+
+  .list-table-format {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px;
+
+    background: linear-gradient(145deg, #020617, #0b0f1a);
+  }
+
+  .list-table-format img {
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+  }
+
+  .list-table-format p {
+    font-size: 15px;
+  }
+
+  .list-table-format p:last-child {
+    text-align: right;
+    font-size: 20px;
+  }
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

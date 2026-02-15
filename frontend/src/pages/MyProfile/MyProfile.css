@@ -1,0 +1,225 @@
+/* ---------------- PAGE ---------------- */
+.profile-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #eef2f3);
+}
+
+/* ---------------- WRAPPER ---------------- */
+.profile-wrapper {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 25px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* ---------------- CARDS ---------------- */
+.profile-card,
+.rewards-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.profile-card:hover,
+.rewards-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------- HEADER ---------------- */
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2e8b57, #3cb371);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+}
+
+.profile-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.profile-header p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ---------------- INFO ---------------- */
+.profile-info {
+  margin-bottom: 15px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-row span {
+  color: #777;
+  font-size: 14px;
+}
+
+.info-row strong {
+  font-size: 14px;
+}
+
+/* ---------------- BUTTON ---------------- */
+.change-pass-btn {
+  width: 100%;
+  padding: 10px;
+  background: #2e8b57;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.change-pass-btn:hover {
+  background: #3cb371;
+}
+
+/* ---------------- PASSWORD ---------------- */
+.password-box {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeSlide 0.3s ease;
+}
+
+.password-box input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.password-box input:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 4px rgba(46, 139, 87, 0.3);
+  outline: none;
+}
+
+.password-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.password-actions button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #2e8b57;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.password-actions button:hover {
+  background: #3cb371;
+}
+
+/* ---------------- REWARDS ---------------- */
+.rewards-card h3 {
+  margin-bottom: 15px;
+}
+
+.reward-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reward-item.pending {
+  background: #fff8e6;
+  color: #b7791f;
+  border-left: 5px solid #f6ad55;
+}
+
+.reward-item.used {
+  background: #e6fffa;
+  color: #065f46;
+  border-left: 5px solid #38b2ac;
+}
+
+.reward-item.expired {
+  background: #ffe5e5;
+  color: #991b1b;
+  border-left: 5px solid #f56565;
+}
+
+.no-reward {
+  color: #999;
+  font-style: italic;
+}
+
+/* ---------------- LOADING ---------------- */
+.profile-loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+}
+
+/* ---------------- ANIMATION ---------------- */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 992px) {
+  .profile-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-card,
+  .rewards-card {
+    padding: 18px;
+  }
+
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
